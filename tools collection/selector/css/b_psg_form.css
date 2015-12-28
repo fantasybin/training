@@ -1,0 +1,119 @@
+/*乘客信息表单 */
+.b_psg_form{}
+.e_psg_form{ border-bottom:1px solid #dfdfdf; background:#fff; padding:10px 0 8px; position:relative;}
+.e_psg_form_nob{ border-bottom:0; padding-bottom:5px;}
+.e_psg_form:hover{background-color:#f7fdfd;}
+/*.e_psg_active{background:#f7fdfd;}*/
+.crl_group{zoom:1; position:relative;margin-bottom:8px;}
+.crl_group:after{clear:both;display:block;height:0;visibility:hidden;content:".";}
+.crl_group .controls{padding-left:40px;}
+.crl_group .crl_sp5_1, .crl_group .crl_sp5_2, .crl_group .crl_sp5_3, .crl_group .crl_sp5_4, .crl_group .crl_sp5_5, .crl_group .crl_sp5_s1, .crl_group .crl_sp5_2_3, .crl_group .crl_sp5_m1{ float:left; display:block;}
+.crl_group .crl_sp5_1{ width:155px;}
+.crl_group .crl_sp5_2{ width:155px;}
+.crl_group .crl_sp5_3{ width:160px;}
+.crl_group .crl_sp5_4{ width:307px;}
+.crl_group .crl_sp5_5{ width:165px;}
+.crl_group .crl_sp5_s1{ width:140px;}
+.crl_group .crl_sp5_2_3{ width:330px;}
+.crl_group .crl_sp5_m1{ width:120px;}
+.crl_group .crl_close{ float:right; display:block; width:15px; padding: 3px 5px 0 0;}
+
+.crl_group .reim_inp{margin-left:55px;zoom:1;}
+.crl_group .crl_lab{ float:left; display:block; text-align:right; width:30px; line-height:23px;}
+.crl_group .crl_lab .req{ color:#ff075b; width:18px; display:inline-block; text-align: center; vertical-align:middle;}
+.crl_group .crl_lab .ico_warn_s{ vertical-align:middle; margin:-3px 1px 0;_margin-top:0;}
+.crl_group .crl_sp5_1 .crl_lab, .crl_group .crl_sp5_2 .crl_lab,  .crl_group .crl_sp5_3 .crl_lab, .crl_group .crl_sp5_s1 .crl_lab, .crl_group .crl_sp5_m1 .crl_lab{ width:55px;}
+.crl_group .crl_sp5_4 .crl_lab, .crl_group .crl_sp5_5 .crl_lab{ width:90px;}
+.crl_group .crl_sp5_2_3 .crl_lab{ width:70px;}
+.crl_group .crl_sp5_1 .controls, .crl_group .crl_sp5_2 .controls,  .crl_group .crl_sp5_3 .controls, .crl_group .crl_sp5_s1 .controls, .crl_group .crl_sp5_m1 .controls{ padding-left:55px;}
+.crl_group .crl_sp5_4 .controls, .crl_group .crl_sp5_5 .controls {padding-left:90px;}
+.crl_group .crl_sp5_2_3 .controls{padding-left:70px;}
+
+.crl_group .crl_sp4_1, .crl_group .crl_sp4_2, .crl_group .crl_sp4_3, .crl_group .crl_sp4_4{ float:left; display:block; width:24%;}
+.crl_group .crl_sp4_1 .crl_lab, .crl_group .crl_sp4_2 .crl_lab{ width:55px;}
+.crl_group .crl_sp4_3 .crl_lab, .crl_group .crl_sp4_4 .crl_lab{ width:90px;}
+.crl_group .crl_sp4_1 .controls, .crl_group .crl_sp4_2 .controls {padding-left:55px;}
+.crl_group .crl_sp4_3 .controls, .crl_group .crl_sp4_4 .controls{padding-left:90px;}
+
+.crl_group .crl_sp1 .crl_lab{ width:90px;}
+.crl_group .crl_sp1 .controls{padding-left:90px;}
+.crl_group .crl_sp1 .q_inpbox{ margin-right:2px;margin-right:5px;_margin-right:4px;}
+.crl_group .crl_sp1 .q_inpbox_country{ width:89px; float:left;}
+.crl_group .crl_sp1 .q_csel_province{ width:155px;}
+.crl_group .crl_sp1 .q_inpbox_province{ width:144px;}
+.crl_group .crl_sp1 .q_inpbox_city{ width:204px;}
+.crl_group .crl_sp1 .q_inpbox_street{ width:235px;}
+.crl_group .crl_sp1 .q_inpbox_code{ width:130px;}
+
+.crl_group .crl_sp1 .q_csel_province .yselector{width:150px;}
+.crl_group .crl_sp1 .q_csel_province .yselector_suggest ul{width:148px;}
+
+.crl_group .yselector_box{ padding:2px 20px 1px 2px;}
+.crl_group .yselector, .crl_group .cs_ymd{ float:left; display:block;}
+.crl_group .cs_ymd{ padding:0 4px;}
+.crl_group .cs_y .yselector{ width:60px;}
+.crl_group .cs_y .yselector_suggest ul{ width:58px;}
+.crl_group .cs_m .yselector, .crl_group .cs_d .yselector{ width:46px;}
+.crl_group .cs_m .yselector_suggest ul, .crl_group .cs_d .yselector_suggest ul{ width:44px;}
+.crl_group .cs_type .yselector{ width:98px;}
+.crl_group .cs_type .yselector .yselector_input{ _width:65px;}
+.crl_group .cs_type .yselector_suggest ul{ width:96px;}
+.crl_group .cs_gender .yselector{ width:75px;}
+.crl_group .cs_gender .yselector_suggest ul{ width:70px;}
+.crl_group .cs_crede .yselector { width:100px; margin-right:5px;}
+.crl_group .cs_crede .yselector_suggest ul{ width:98px;}
+.crl_group .cs_insure .yselector{ width:55px;}
+.crl_group .cs_insure .yselector_suggest ul{ width:53px;}
+.crl_group .cs_province, .crl_group .cs_city, .crl_group .cs_area{ margin-right:5px;}
+.crl_group .cs_nation .yselector{ width:72px;}
+.crl_group .cs_nation .yselector_suggest ul{ width:70px;}
+
+.crl_group .q_inpbox_idnum{ width:142px;_width:139px;}
+
+.e_address_form{ padding:0 0 8px 0; border-bottom:0; margin-bottom:10px;}
+.e_address_form .crl_group .crl_lab{ width:55px;}
+.e_address_form .crl_group .controls {padding-left:0;}
+.e_address_form .crl_group .q_inpbox_address{ width:336px;}
+.e_address_form .crl_group .q_inpbox_zipcode{ width:110px;}
+.e_address_form .crl_group .addr_list{ margin-bottom:5px;}
+
+.crl_group .txt_b{ line-height:20px; margin-right:15px;}
+.crl_group .txt_c{ color:#888;}
+.crl_group .rmb{ font-family:Arial;}
+
+.e_psg_point{ padding:0px 15px 10px;}
+.e_psg_point .m_add_psg{padding:10px 0 5px;line-height:22px;color:#888;}
+.e_psg_point .m_add_psg .js_btn_add{ float:left;}
+.e_psg_point .m_add_psg .highlight {color: #ff075b;}
+.e_psg_point .m_add_psg span.highlight { padding-left: 10px;}
+.m_contact_add {float:right;margin-right:10px;}
+.ul_psg_point {float:left;}
+.btn_add_newpsg, a.btn_add_newpsg:hover{ background:url(http://source.qunar.com/site/images/flagship/ihnair/btn_flag.png) no-repeat scroll 0 0; width:61px; height:22px; padding:0 2px 0 20px; line-height:22px; color:#555; display:inline-block;}
+.ul_psg_point li{ line-height:20px; color:#888;}
+.e_psg_point .p_psg{ line-height:25px; margin-bottom:5px;}
+.e_psg_point .m_psg_sel{ margin-bottom:3px;}
+.e_psg_point .m_psg_sel label{ margin-right:15px;}
+.e_psg_point .inp_ch{ vertical-align:middle; margin:-2px 3px 0 0;*margin:-2px -2px 0 0;_margin-top:-3px;}
+.e_psg_point .m_psg_sel .txt_b{ color:#888;}
+.e_psg_point .lab_save_psg{ float:right; display:block; margin-right:10px;}
+/*\乘客信息表单 */
+
+
+/**常用联系人**/
+.e_pass_used{ margin-bottom:10px;}
+.e_pass_used .m_pass_tab{border-bottom:1px solid #bbe9f0; padding:0 15px; }
+.e_pass_used .m_pass_list{ padding:10px 15px 0; border-bottom:1px solid #bbe9f0;background:#f4fbfc; *padding-bottom:8px; height:25px; overflow:hidden;*height:23px;}
+.e_pass_used .m_exp{ height:auto;}
+.m_pass_tab li{ float:left; display:inline-block;} 
+.m_pass_tab li a, .m_pass_tab li span{ display:inline-block; border:1px solid #bbe9f0;  height:20px; line-height:20px; color:#555; padding:0 15px; margin-right:10px; margin-top:1px; margin-bottom:-1px; position:relative;-moz-border-radius: 2px; -webkit-border-radius: 2px;border-radius:2px;}
+.m_pass_tab li.cur a, .m_pass_tab li.cur span{background:#f4fbfc; border-bottom:0;}
+.m_pass_tab li a em{ color:#888;}
+.e_pass_used .lnk_more{ float: right; width:50px;}
+.ulpass_list li{ float:left;display: block;height:20px; line-height:20px; overflow:hidden; width:135px; padding-right:5px; margin-bottom:8px;}
+.ulpass_list li .inp_ch{ float:left; display:block; margin:3px 3px 0 2px;*margin-top:0px;margin-top:0px\0;}
+.ulpass_list li label{float:left; display:block;width:110px;  overflow:hidden;}
+/**\常用联系人**/
+
+
+
+

@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id="msg">
+
+</div>
+<script type="text/javascript" src="/jquery/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="scripts/QClass.js"></script>
+<script type="text/javascript">
+	(function(){
+		QClass.define('li.oodemo.list', {
+			singleton : false,
+
+			initialize : function(){
+				this.Name = 'List';
+				$("#msg").append('<div>li.oodemo.list.initialize.</div>');
+				console.info('li.oodemo.list.initialize.');
+			},
+
+			getName : function(){
+				return this.Name || "";
+			},
+
+			setName : function( name ){
+				this.Name = name;
+			},
+
+			clear : function(){
+				
+			}
+		});
+
+		QClass.define('li.oodemo.sublist', {
+
+			extend: li.oodemo.list,
+
+			initialize : function(){
+				this.Name = 'SubList';
+				this.parent();
+				write('<div>li.oodemo.sublist.initialize.</div>');
+				console.info('li.oodemo.sublist.initialize.');
+			},
+			getName : function(){
+				return this.Name;
+			},
+
+			setName : function( name ){
+				this.Name = name;
+			}
+		});
+
+		var list = new li.oodemo.list();
+		$("#msg").append('<div>'+ list.getName() + '</div>');
+		console.info(list.getName());
+		list.setName('hello OO');
+		$("#msg").append('<div>'+ list.getName() + '</div>');
+		console.info(list.getName());
+
+		var sublist = new li.oodemo.sublist();
+		write(sublist.getName());
+		//sublist.setName('sublist');
+		write(sublist.getName());
+		
+
+		function write(text)
+		{
+			$("#msg").append('<div>'+ text +'</div>');
+		}
+	})();
+</script>
+</body>
+</html>

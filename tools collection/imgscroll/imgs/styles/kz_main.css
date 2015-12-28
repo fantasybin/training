@@ -1,0 +1,201 @@
+@charset "utf-8";
+/* CSS Document */
+.qcbox { border:1px solid #abadb3; background-color:#fff; color:#555; }
+.qcbox .labelContainer { display:none; }
+.qcbox .boxWrapper { position:relative; z-index:1; }
+.qcbox .boxContainer { position:absolute; z-index:1; top:2px; right:2px; padding-left:4px; height:19px; background-color:#fff; cursor:pointer; overflow:hidden; }
+.qcbox .sinfo { float:left; display:inline; padding:0; font:normal 14px/19px simsun,arial,sans-serif; _line-height:21px; }
+.qcbox .infotext { color:#ccc; }
+.qcbox .sicon { float:left; display:inline; width:20px; height:19px; background:url(http://source.qunar.com/site/images/2011/QN1CS1.gif) 1px 3px no-repeat; }
+.qcbox .textbox { border:0 none; padding:1px 0 2px; width:100%; height:20px; height:18px\9; font:normal 14px/18px simsun,arial,sans-serif; _line-height:20px; background-color:#fff; color:#555; }
+.qcbox .popContainer { position:relative; z-index:1000; clear:both; }
+.qcbox .popPanel { position:absolute; z-index:1; top:0; left:-1px; border:1px solid #abadb3; background-color:#fff; }
+.qcbox .errtext { color:red !important; }
+.qbc_fin { border: 1px solid #c7a15a; }
+
+.qcbox .ill { width:185px; }
+.qcbox .illrow { line-height: 22px; }
+.qcbox .illrow td { padding:0 0 0 4px !important; overflow:hidden; cursor: pointer; white-space:nowrap; }
+.qcbox td.illn { line-height: 24px; font-size:13px; padding-left:8px; text-align:left; font-family:simsun; padding-left:4px; }
+.qcbox .illt { color: green; line-height: 24px; font-size:11px; padding-right:4px; text-align:right; font-family:arial, sans-serif, SimSun; }
+.qcbox .tllover td { color: white; background-color:#4778da; }
+.qcbox .keystring { color:#f60; }
+.qcbox .error td { font-size:13px; background-color:#c30; color:#fff; }
+
+.qcity .cityinput { width:350px; }
+.qcity .cityinput .hint { padding:5px; font-size:12px; }
+.qcity .cityinput .closeImg { display:block; float:right; width:14px; height:14px; cursor:pointer; }
+.qcity .cityinput hr { clear:both; border:0; border-bottom:1px dashed #bbb; color:#fff; }
+.qcity .cityinput ul { margin:0; padding:0; height:1%; }
+.qcity .cityinput ul:after { clear:both; display:block; height:0; visibility:hidden; content:"\20"; }
+.qcity .cityinput ul li { float:left; padding:5px 0; width:20% !important; text-align:center; }
+.qcity .cityinput ul li a { padding:2px 8px; color:#555 !important; }
+.qcity .cityinput ul li a:hover { text-decoration:none; color:#555; }
+.qcity .cityinput .inter ul li { width:25% !important; }
+.qcity .cityinput_hotel ul li { width:25% !important; }
+
+.qqc .infotext { font-size:12px; }
+
+.qdate .sicon { background-position:-25px 3px; }
+.qdate .dpanel { width:340px; *zoom:1; }
+.qdate .dpanel:after { clear:both; display:block; height:0; visibility:hidden; content:"\20"; }
+.qdate .dpart { position:relative; z-index:1; float:left; display:inline; margin-left:-1px; border-left:1px solid #ccc; width:170px; color:#000; overflow:hidden; }
+.qdate .dpart h3 { height:24px; font:normal 12px/24px tahoma,arial,sans-serif; text-align:center; color:#0069ca; }
+.qdate .dpart table { margin:1px; padding:0; border:0 none; border-collapse:collapse; width:168px; }
+.qdate .dpart td { margin:0; padding:0 !important; width:24px; height:18px; font:normal 12px/18px tahoma,arial,sans-serif; text-align:center; vertical-align:middle; }
+.qdate .dpart .thead td { border-bottom:1px solid #ccc; height:21px; line-height:21px; }
+.qdate .upTd { position:absolute; top:0; left:0; width:24px; height:24px; background:url(http://source.qunar.com/site/images/2011/QN1CS1.gif) -44px 5px no-repeat; cursor:pointer; }
+.qdate .downTd { position:absolute; top:0; right:0; width:24px; height:24px; background:url(http://source.qunar.com/site/images/2011/QN1CS1.gif) -62px 5px no-repeat; cursor:pointer; }
+.qdate .cnone { color:#999; cursor:default; }
+.qdate .holi { color:#c60b02; }
+.qdate .onmouseover { background-color:#fdab00; color:#fff; cursor:pointer; }
+.toD .onmouseover { background-color:#6899ff; color:#fff; cursor:pointer; }
+.qdate .out { background-color:transparent; color:#999; cursor:not-allowed; }
+.qdate .today { color:#00f; }
+.qdate .curr { background-color:#fdab00; color:#fff; }
+.qdate .othr { background-color:#6899ff; color:#fff; }
+
+.hotCityNav { margin-top:4px; border-bottom:1px solid #ddd; _height:1%; overflow:hidden; }
+.hotCityNav span { position:relative; bottom:-1px; float:left; display:inline; margin-right:8px; padding:0 8px; border:1px solid #ddd; height:18px; font-size:12px; line-height:18px; text-align:center; background-color:#fff; color:#0069ca; cursor:pointer; }
+.hotCityNav span.active { background-color:#e8edf1; }
+
+.showblock { margin:0; padding:6px 10px; width:328px; font-size:12px; line-height:22px; background:#fff; }
+.showblock b.oymTitle { display:block; font-size:14px; font-weight:700; }
+.showblock p { margin-bottom:8px; padding-bottom:8px; border-bottom:1px dashed #ccc; word-spacing:6px; }
+.showblock p.last { margin-bottom:0; padding-bottom:0; border-bottom:0; }
+.showblock a { color:#0069ca; cursor:pointer; white-space:nowrap; }
+.showblock a:hover { color:#f60; }
+
+.dbg1, .dbg2, .dbg3, .dbg4, .dbg5, .dbg6,
+.dbg7, .dbg8, .dbg9, .dbg10, .dbg11, .dbg12,
+.bgCalender1, .bgCalender2, .bgCalender3, .bgCalender4, .bgCalender5, .bgCalender6,
+.bgCalender7, .bgCalender8, .bgCalender9, .bgCalender10, .bgCalender11, .bgCalender12 { background:url(http://source.qunar.com/site/images/2011/QN1CS3.png) 0 0 no-repeat; }
+.dbg1, .bgCalender1 { background-position:36px 60px; }
+.dbg2, .bgCalender2 { background-position:-134px 60px; }
+.dbg3, .bgCalender3 { background-position:-306px 60px; }
+.dbg4, .bgCalender4 { background-position:36px -100px; }
+.dbg5, .bgCalender5 { background-position:-134px -100px; }
+.dbg6, .bgCalender6 { background-position:-306px -100px; }
+.dbg7, .bgCalender7 { background-position:36px -257px; }
+.dbg8, .bgCalender8 { background-position:-134px -257px; }
+.dbg9, .bgCalender9 { background-position:-306px -257px; }
+.dbg10, .bgCalender10 { background-position:36px -412px; }
+.dbg11, .bgCalender11 { background-position:-134px -412px; }
+.dbg12, .bgCalender12 { background-position:-306px -412px; }
+
+/*qn_page*/
+.qn_page{ width:980px;}
+.hide{ display:none;}
+.hiden{ visibility:hidden;}
+
+/*筛选*/
+.kez_sx:after{ clear:both; display:block; height:0; visibility:hidden; content:"\20"; }
+.kez_sx h2{ float:left; background:url(http://source.qunar.com/site/images/hotel/kezhan/keindex_icon.png) no-repeat 0 -110px; width:127px; height:30px; text-indent:-9999em; margin-right:8px;}
+.se{ float:left;}
+.se .tbl { border-collapse:collapse; }
+.se .f{ padding-top:3px;}
+.se .f dl { height:25px; font-size:14px; *zoom:1; float:left;}
+.se .f dl:after { display:block; visibility:hidden; clear:both; height:0; content:"\20"; }
+.se .f dt { float:left; display:inline; width:55px; font-weight:700; line-height:25px; color:#000; display:none;}
+.se .f dd { float:left; display:inline; }
+.se .f ul { *zoom:1; }
+.se .f ul:after { display:block; visibility:hidden; clear:both; height:0; content:"\20"; }
+.se .f li.b_city { float:left; display:inline; width:140px; height:25px; }
+.se .f li.b_keyword{ float:left; display:inline; width:186px; height:25px; margin-right:6px; margin-left:6px; }
+.se .f li.b_date_in { float:left; display:inline; margin-right:6px; width:192px; height:25px; }
+.se .f li.b_date_out { float:left; display:inline; width:192px; height:25px; margin-right:10px;}
+.se .ops { width:100px; vertical-align:top;}
+.se .btn_t { position:relative; z-index:1; top:0px; display:block; width:92px; font:normal 14px/30px arial; text-align:center; background-color:#f60; color:#fff; }
+.se .btn { position:relative; z-index:1; top:0px; display:block; margin-top:-30px; border:0; width:100px; height:30px; background:url(http://source.qunar.com/site/images/hotel/kezhan/keindex_icon.png)no-repeat; cursor:pointer; outline:none; }
+.se .btn:hover { background-position:0 -35px; }
+.se .btn:active { background-position:0 -70px;}
+.se .ext ul { line-height:18px; display:none;}
+
+.qcity .textbox { padding:1px 22px 2px 4px; width:112px; }
+.qqc .infotext { width:158px; }
+.qqc .textbox { padding:1px 22px 2px 4px; width:58px; }
+.qqc .ill { width:348px; }
+.qdate { position:relative; z-index:800; }
+.qdate .labelContainer { position:absolute; top:0; left:0; display:block; padding:0 4px; line-height:22px; _line-height:27px; }
+.qdate .textbox { padding:1px 4px 2px 36px; width:150px; }
+
+/*焦点切换图*/
+.hot_screen{ margin-top:11px; position:relative; z-index:90;}
+.hmain{ width:980px; height:340px; overflow:hidden; position:relative; z-index:1;}
+.hmain ul{ width:15000px;}
+.hmain li{ position:relative; z-index:1; float:left;}
+.hmain li a{ display:block;}
+.hmain li .bg{ position:absolute; left:0; top:295px; background:#000;filter:alpha(opacity=75);opacity:0.75; height:45px; width:100%; z-index:1;}
+.hmain li h4{ position:absolute; left:0; top:295px; color:#fff; font:20px/45px "微软雅黑"; padding:0 20px; z-index:10; word-wrap:break-word;}
+.hmain li a:hover h4{ color:#fff; text-decoration:underline;}
+
+/*焦点page*/
+.hpage{ position:absolute; right:12px; top:295px; height:45px; z-index:10;}
+.hpage li{ float:left; padding:18px 6px 0 0;}
+.hpage li span{ display:block; width:10px; height:10px; font-size:0; background:url(http://source.qunar.com/site/images/hotel/kezhan/keindex_icon.png) no-repeat -117px -9px; cursor:pointer;}
+.hpage li.active span{ background-position:-117px -24px;}
+
+/*焦点btn*/
+.hbtn a{  position:absolute; z-index:20;display:block; width:27px; height:60px; overflow:hidden; text-indent:-9999px; background:url(http://source.qunar.com/site/images/hotel/kezhan/keindex_icon.png) no-repeat}
+.hbtn a.prev{ top:125px; left:14px; background-position:0 -150px; _background-position:0 -220px;}
+.hbtn a.next{ top:125px; right:14px; background-position:-33px -150px; _background-position:-33px -220px;}
+
+
+/*热门城市tab*/
+.tab_hotcity{ background:url(http://source.qunar.com/site/images/hotel/kezhan/xbar.png) repeat-x; height:33px; line-height:33px; margin-top:10px;}
+.tab_hotcity p{ float:left; padding:0 12px 0 14px; font:bold 14px/33px simsun; color:#DB0869;}
+.tab_hotcity li{ float:left; line-height:33px; position:relative; z-index:10; height:33px; }
+.tab_hotcity li a{ color:#149193;  font-size:14px; display:inline-block;}
+.tab_hotcity li a span{ padding:0 10px 0 9px; display:inline-block; float:left; cursor:pointer;}
+.tab_hotcity li a .tbg{ display:block; width:4px; height:4px; font-size:0; position:absolute; right:-4px; top:0px;}
+.tab_hotcity li a .rbg{ display:block; width:1px; height:33px; font-size:0;background:url(http://source.qunar.com/site/images/hotel/kezhan/xbar.png) no-repeat -8px -90px; float:left;}
+.tab_hotcity li a .lbg{ display:block; width:1px; height:33px; font-size:0;background:url(http://source.qunar.com/site/images/hotel/kezhan/xbar.png) no-repeat -9px -90px; float:left;}
+
+.tab_hotcity li a:hover{zoom:1;}
+.tab_hotcity li a:hover span{ background:url(http://source.qunar.com/site/images/hotel/kezhan/xbar.png) repeat-x 0 -135px;}
+.tab_hotcity li a:hover .lbg{ background:url(http://source.qunar.com/site/images/hotel/kezhan/xbar.png) repeat-x 0 -135px;}
+
+.tab_hotcity li.active { margin-top:-4px;}
+.tab_hotcity li.active a{ line-height:40px;}
+.tab_hotcity li.active a span{background:url(http://source.qunar.com/site/images/hotel/kezhan/xbar.png) repeat-x 0 -40px; padding:0 9px 0 10px; color:#fff;font-weight:bold;}
+.tab_hotcity li.active a .tbg{ background:url(http://source.qunar.com/site/images/hotel/kezhan/keindex_icon.png) no-repeat -123px 0;}
+.tab_hotcity li.active a .rbg{background:url(http://source.qunar.com/site/images/hotel/kezhan/xbar.png) repeat-x 0 -40px; height:40px;}
+.tab_hotcity li.active a .lbg{background:url(http://source.qunar.com/site/images/hotel/kezhan/xbar.png) repeat-x 0 -40px; height:40px;}
+
+/*热门城市cont*/
+.tab_hotcity_cont{ padding-bottom:30px;}
+.hotcity_img_box{ position:relative; z-index:1;  margin-top:-3px; *margin-top:0px;_margin-top:-7px;}
+.hotcity_img_box img{ margin-top:-3px; *margin-top:0px;}
+.hotcity_img_box p{ position:absolute; left:326px; top:69px; color:#fff; line-height:22px; width:390px; height:90px; overflow:hidden; word-wrap:break-word;}
+
+.qnke_spot{ padding-bottom:14px; border-top:1px solid #cfcfcf; margin-top:-4px;}
+
+/*qnke_spot_top*/
+.qnke_spot_top{ padding:13px 0 15px;}
+.qnke_spot_top h3{ font:36px/40px "微软雅黑"; color:#169192; float:left; padding-right:30px;}
+.qnke_spot_top .list{ float:left; line-height:22px; color:#565656;}
+.qnke_spot_top .list span{ display:inline-block; height:22px;}
+.qnke_spot_top .list em{ display:inline-block; background:#95BFBE; width:8px; height:8px; font-size:0; margin-right:3px;}
+
+/*imglist*/
+.qnke_spot_cont .list{ float:right;}
+.qnke_spot_cont .list li{ float:left; padding:1px 0 0 15px; height:180px; width:180px; overflow:hidden;}
+.qnke_spot_cont .list li img{ vertical-align:middle;}
+.qnke_spot_cont .list li a{ display:block;}
+.qnke_spot_cont .list li .pop{ height:154px; position:relative; z-index:1; margin-top:-180px;}
+.qnke_spot_cont .list li a .pop{ visibility:hidden;}
+.qnke_spot_cont .list li a:hover{zoom:1;}
+.qnke_spot_cont .list li a:hover .pop{ visibility:visible;}
+.qnke_spot_cont .list li .pop .bg{ position:absolute; left:0; top:0px; background:#000;filter:alpha(opacity=60);opacity:0.6; height:154px; width:100%; z-index:1;}
+.qnke_spot_cont .list li .pop .text{ position:absolute; left:0; top:0px; line-height:22px; color:#fff; z-index:2; height:134px; overflow:hidden; padding:10px 6px; margin-left:4px; margin-right:4px;width:160px; border-bottom:1px solid #4B4B4B;}
+.qnke_spot_cont .list li .summary{ height:26px; position:relative; z-index:2; margin-top:-26px;}
+.qnke_spot_cont .list li .summary .bg{ position:absolute; left:0; top:26px; background:#000;filter:alpha(opacity=60);opacity:0.6; height:26px; width:100%; z-index:1;}
+.qnke_spot_cont .list li .summary h4{ position:absolute; left:0; top:26px; line-height:26px; color:#fff; z-index:2; padding:0 10px; width:160px;}
+.qnke_spot_cont .list li a:hover .summary h4{ color:#3EC0C0;}
+
+/*地点*/
+.qnke_spot_cont .place{ float:left; width:200px; }
+.qnke_spot_cont .place a{ word-wrap:break-word;word-break:break-all ;display:inline-block; height:25px; line-height:25px; background:url(http://source.qunar.com/site/images/hotel/kezhan/place_bg.png) no-repeat right -37px; padding:0 8px 2px 0; margin:0 0 8px 7px;}
+.qnke_spot_cont .place a em{ float:left; height:25px; line-height:25px; width:6px; padding-bottom:2px; background:url(http://source.qunar.com/site/images/hotel/kezhan/place_bg.png) no-repeat 0 -37px;}
+.qnke_spot_cont .place a.active,.qnke_spot_cont .place a:hover{ background-position:right 0; color:#fff;}
+.qnke_spot_cont .place a.active em,.qnke_spot_cont .place a:hover em{ background-position:0 0;}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link type="text/css" rel="stylesheet"
+	      href="../bootstrap/css/bootstrap.css"/>
+	<link type="text/css" rel="stylesheet"
+	      href="../bootstrap/css/docs.min.css"/>
+
+	<link type="text/css" rel="stylesheet" href="css/yselector.css"/>
+	<link type="text/css" rel="stylesheet" href="css/b_psg_form.css"/>
+</head>
+<body>
+<div class="container">
+	<div class="row" style="height:100px;">
+		<h1 style="text-align: center;">Selector</h1>
+	</div>
+	<div class="row" style="border: solid 1px #ccc;padding: 20px;">
+		<div class="col-md-9">
+			<div class="bs-docs-section">
+				<div class="bs-example" data-example-id="basic-forms">
+					<label>selector:</label>
+
+					<div class="crl_group">
+						<div class="yselector cs_province">
+							<select name="province" id="province">
+								<option value=" ">选择省</option>
+							</select>
+						</div>
+						<div class="yselector cs_city">
+							<select name="city" id="city">
+								<option value=" ">选择市</option>
+							</select>
+						</div>
+						<div class="yselector cs_area">
+							<select name="district" id="district">
+								<option value=" ">选择区/县</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="csparest wt_cercode">
+				<select class="selectbox idtype hide" id="usermenu"
+				        style="display: none;">
+					<option value="/ods/Project/Index">我的作品</option>
+					<option value="/ods/Profile">我的资料</option>
+					<option value="/Account/Manage">修改密码</option>
+					<option value="/Account/LogOff">退出</option>
+				</select>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="scripts/jquery.selector.js"></script>
+<script type="text/javascript" src="scripts/jquery.placeholder.js"></script>
+<script type="text/javascript" src="scripts/AreaData.js"></script>
+<script>
+	$(function() {
+		function getName(id) {
+			var el = areaMap[id];
+			return el ? el.name : '';
+		}
+
+		function initData() {
+			var data = AreaData;
+			var res = {
+				'1': { name: 'root', code: "1", children: []}
+			};
+
+			for (var p in data) {
+				if (!data.hasOwnProperty(p)) continue;
+				if (isNaN(parseInt(p, 10))) continue;
+				var item = data[p],
+					pid = item[1] || '1',
+					el = res[pid];
+
+				res[p] = { name: item[0], code: p, parent: item[1] };
+
+				if (el) {
+					if (!el.children) {
+						el.children = [];
+					}
+					el.children.push(p);
+				}
+			}
+			return res;
+		}
+
+		function rebuildList(list, def) {
+			var newlist = $.map(list, function(item) {
+
+				return  {
+					text: getName(item),
+					value: item
+				};
+			});
+			def && newlist.unshift(def);
+			return newlist;
+		}
+
+		var province = $('#province'),
+			city = $('#city'),
+			district = $('#district'),
+			address = $('#address');
+
+		address.placeholder();
+
+		var areaMap = initData();
+		var provinces = areaMap['1'].children;
+
+		var options = province.get(0).options;
+
+		$.each(provinces, function(i, item) {
+			options.add(new Option(getName(item), item));
+		});
+
+		district.yselector();
+
+		city.yselector({
+			onchange: function(o) {
+				var _dis = o.value,
+					dis = areaMap[_dis],
+					list = dis && dis.children ? dis.children : [];
+				var opts = rebuildList(list, {text: "选择区/县"});
+				district.data('YSELECTOR').setOptions(opts);
+			}
+		});
+
+		province.yselector({
+			onchange: function(o) {
+				var _city = o.value,
+					c = areaMap[_city],
+					list = c && c.children ? c.children : [];
+
+				var opts = rebuildList(list, list.length ?
+					null : {text: "选择市", value: " "});
+				city.data('YSELECTOR').setOptions(opts);
+			}
+		});
+	});
+
+
+	function initSelect() {
+		$("#usermenu").yselector({
+			onchange: function (o) {
+				if (inited === true) {
+					var _pathname = window.location.pathname;
+					if (o.value !== _pathname) {
+						window.location = o.value;
+					}
+				}
+			}
+		});
+	}
+
+	var testObj = [{key:'北京',val:'010'},{key:'天津',val:'022'},{key:'山西',val:'0356'}];
+
+	var options = $("#usermenu").get(0).options;
+	$.each(testObj, function(i, opts){
+		options.add(new Option( opts.key, opts.val ));
+	});
+	$("#usermenu").yselector();
+
+</script>
+</body>
+</html>

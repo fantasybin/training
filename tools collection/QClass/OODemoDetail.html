@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript" src="/jquery/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="scripts/QClass.js"></script>
+<script type="text/javascript">
+	(function(){
+		QClass.define('li.oodemo.detail', {
+			singleton : true,
+
+			initialize : function(){
+				this.Name = 'detail';
+			},
+
+			getName : function(){
+				return this.Name || "";
+			},
+
+			setName : function( name ){
+				this.Name = name;
+			}
+
+		})
+	})();
+</script>
+</body>
+</html>

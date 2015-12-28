@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta http-equiv="Expires" content="0">
+        <title>hot city - UCarCombox</title>
+        <link type="text/css" rel="stylesheet" href="../bootstrap/css/bootstrap.css"/>
+        <link type="text/css" rel="stylesheet" href="../bootstrap/css/docs.min.css"/>
+        <link type="text/css" rel="stylesheet" href="css/global.css"/>
+        <link type="text/css" rel="stylesheet" href="css/kz_public.css"/>
+	    <style>
+		    ul, ol, menu {
+  list-style: none;
+}
+		.qcity .hotelhint {
+			width: 430px;
+			font-size: 12px;
+			border: 1px solid #ccc;
+			box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1)
+		}
+
+		.qcity .hotelhint .closeImg {
+			cursor: pointer;
+			display: block;
+			float: right;
+			height: 14px;
+			width: 14px;
+			margin-right: 7px;
+			margin-top: 7px
+		}
+
+		.qcity .hotelhint ul {
+			height: 1%;
+			margin: 0;
+			padding: 0;
+			margin-left: 10px
+		}
+
+		.qcity .hotelhint ul:after {
+			clear: both;
+			content: " ";
+			display: block;
+			height: 0;
+			visibility: hidden
+		}
+
+		.qcity .hotelhint ul li {
+			float: left;
+			height: 24px;
+			vertical-align: middle;
+			line-height: 24px;
+			overflow: hidden;
+			text-align: left;
+			width: 20%
+		}
+
+		.qcity .hotelhint ul li a {
+			color: #333;
+			font-size: 12px
+		}
+
+		.qcity .hotelhint ul li a:hover {
+			color: #0084bb;
+			text-decoration: none;
+			font-weight: 700
+		}
+
+		.qcity .hotelhint .b_hct_tit {
+			font-size: 12px;
+			line-height: 12px;
+			padding: 10px 10px;
+			padding-bottom: 8px;
+			color: #999
+		}
+
+		.qcity .hotelhint .b_hct_nav {
+			border-bottom: 1px solid #e8e8e8;
+			padding-left: 10px;
+			zoom: 1
+		}
+
+		.qcity .hotelhint .b_hct_nav:after {
+			clear: both;
+			content: ".";
+			display: block;
+			height: 0;
+			visibility: hidden
+		}
+
+		.qcity .hotelhint .b_hct_nav span {
+			position: relative;
+			bottom: -1px;
+			float: left;
+			display: inline;
+			margin-right: 25px;
+			color: #0084bb;
+			cursor: pointer;
+			font-size: 12px;
+			height: 32px;
+			line-height: 32px;
+			vertical-align: middle;
+			text-align: center
+		}
+
+		.qcity .hotelhint .b_hct_nav span.active {
+			border-bottom: 1px solid #0084bb;
+			font-weight: bold
+		}
+
+		.qcity .hotelhint .b_hct_lst {
+			padding: 9px 0 0 10px
+		}
+
+		.qcity .hotelhint .e_hct_lst {
+			height: 1%;
+			margin: 0;
+			padding: 0
+		}
+
+		.qcity .hotelhint .e_hct_lst:after {
+			clear: both;
+			content: " ";
+			display: block;
+			height: 0;
+			visibility: hidden
+		}
+
+		.qcity .hotelhint .b_hct_tip {
+			color: #999;
+			text-align: right;
+			padding: 8px 15px 15px 0
+		}
+		.qcity .e_hct_lst .citychar{color:#0084bb;padding-right:0;display:block;font-size:12px;float:left;height:24px;line-height:24px;text-align:left;width:10px;font-weight:bold;font-family:Tahoma,sans-serif}
+.qcity .e_hct_lst .cityname{float:left;display:block;width:400px;line-height:24px}
+	.qcity .hotelhint ul li a{color:#333}
+	.qcity .hotelhint ul li a:hover{color:#00a3d2}
+	.qcity .e_hct_lst .cityname{font-family:Tahoma,sans-serif}
+	.qcbox .ill{width:232px}
+	.showblock{width:322px}
+	.qqc .ill{width:344px}
+	.qcbox .illtow{width:232px}
+
+	.qcity .hotelhint ul li a { color: #333;font-size: 12px;}
+	.qcity .hotelhint ul li a { color: #333;}
+	.qcity a { color: #0084bb; text-decoration: none; outline: 0;}
+		.clrfix, .clr_after {
+  zoom: 1;
+}
+	    </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="bs-docs-section">
+                        <div class="bs-example" data-example-id="basic-forms">
+                            <form id="form1" class="form-inline">
+                              <div class="form-group">
+                                <label for="exampleInputName2">Name</label>
+                                <div class="selectct">
+                                    <div class="qcbox qcity">
+                                        <input autocomplete="off" type="text" maxlength="50" value="丽江" name="toCity" id="toCity" class="textbox"/>
+                                    </div>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                </div>
+            </div>
+        </div>
+        <script src="../jquery/jquery-1.10.2.js"></script>
+		<script src="scripts/hogan-2.0.0.amd.js"></script>
+        <script src="scripts/old/HotelLang.js"></script>
+		<script src="scripts/UCarHotcity.js"></script>
+        <script src="scripts/UCarSuggest.js"></script>
+        <script src="scripts/UCarCombox.js"></script>
+        <script src="scripts/old/jsex.js"></script>
+        <script src="scripts/old/ScriptRequest.js"></script>
+        <script>
+	        var input = document.getElementById("toCity");
+	        var conf = {
+		        ishotcity: true,
+		        issuggest: true
+	        };
+	        var toCity = new UCarCombox(input,conf);
+	        toCity.init();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta http-equiv="Expires" content="0">
+        <title>home-XCombox</title>
+        <link type="text/css" rel="stylesheet" href="../bootstrap/css/bootstrap.css"/>
+        <link type="text/css" rel="stylesheet" href="../bootstrap/css/docs.min.css"/>
+        <link type="text/css" rel="stylesheet" href="css/global.css"/>
+        <link type="text/css" rel="stylesheet" href="css/kz_public.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="bs-docs-section">
+                        <div class="bs-example" data-example-id="basic-forms">
+                            <form id="form1" class="form-inline">
+                              <div class="form-group">
+                                <label for="exampleInputName2">Name</label>
+                                <div class="selectct">
+                                    <div class="qcbox qcity">
+                                        <input autocomplete="off" type="text" maxlength="50" value="丽江" name="toCity" id="toCity" class="textbox"/>
+                                    </div>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                </div>
+            </div>
+        </div>
+        <script src="../jquery/jquery-1.10.2.js"></script>
+        <script src="scripts/old/jsex.js"></script>
+        <script src="scripts/old/XCombox.js"></script>
+        <script src="scripts/old/XPopup.js"></script>
+        <script src="scripts/old/HotelSuggestItemListLayer.js"></script>
+        <script src="scripts/old/HotelLang.js"></script>
+        <script src="scripts/old/ScriptRequest.js"></script>
+
+    <script>
+
+        var cityBox;
+        var citySuggRequest =  new ScriptRequest({
+                oncomplete: function(data) {
+                if( !data.userInput && data.city )
+                    data.userInput = data.city;
+                cityBox.suggLoaded(data);
+            },
+            callbackName:"callback"
+        });
+        var SuggestLayer = null;
+
+		if( typeof HotelSuggestItemListLayer !== 'undefined' ){
+			SuggestLayer = HotelSuggestItemListLayer;
+			SuggestLayer.getURL = function( value ){ return "http://hs.qunar.com/api/inn/city/typeahead?tag=kz&city=" + encodeURIComponent(value.replace(/[!"#$%&'()*+,-.\/:;<=>?@[\]^_`{|}~]/g,''))};
+			//SuggestLayer.getURL = function( value ){ return "http://hsuggest.qunar.com/hotel_city_suggestion?city=" + encodeURIComponent(value.replace(/[!"#$%&'()*+,-.\/:;<=>?@[\]^_`{|}~]/g,''))};
+		}
+
+        var hotCityConfig = HotelLang.hotCityConfig;
+        var form = document.getElementById("form1");
+        cityBox = this.toCity = new XCombox(form.toCity, {
+        button : {
+            mousedown: function(evt){
+                this.openMainMenu();
+                $jsex.stopEvent(evt);
+            }
+        },
+        input: {
+            click: function(evt){
+                // 20121206 --改变搜索框交互方式（点击输入框时出现热门搜索）
+                var sug = this.popups.get('suggest');
+                if(sug && sug.isOpend()){
+                }
+                else{
+                    this.openMainMenu();
+                }
+                $jsex.stopEvent(evt);
+            },
+            change: function(value,old,selected){
+                var value = $jsex.trim( value.replace(/["\\]*/g,"") );
+                if(!selected){
+                    this.vidx = -1;
+                    this.inputold = value;
+                    if(value){
+                        var sug = this.popups.get('suggest');
+                        sug && sug.layer && (sug.layer.cursor = -1);
+                        citySuggRequest.cancel();
+                        if(this.cache[value])
+                            this.suggLoaded(this.cache[value]);
+                        else{
+                            citySuggRequest.send(SuggestLayer.getURL(value));
+                        }
+                    }else
+                        this.popups.close();
+                }else{
+                    /*
+                    if(qBox.city != value){
+                        qBox.setValue('');
+                        qBox.setTip();
+                    }
+                    */
+                    //$jsex.event.trigger(control, "cityfinished",this.getValue());
+                }
+            },
+            keypress : function(evt) {
+                this.keypress(evt,evt.keyCode);
+            }
+        },
+        focus: function(){
+            this.inputEl.select();
+        },
+        blur: function(){
+            if(this.vidx == -1){
+                var sug = this.popups.get('suggest');
+                if(sug && sug.layer && (sug.layer.cursor > -1)){
+                    this.setValue(sug.layer.nodes[sug.layer.cursor].item.key);
+                }
+            }
+
+            /*
+            if(qBox.city != this.getValue()){
+                qBox.setValue('');
+                qBox.setTip();
+            }
+            */
+        },
+        popups: {
+            main : {
+                initialize: function() {
+                    var cityList = hotCityConfig.list;
+                    var uio = new UIObject()
+                    .text('<div class="cityinput" hotcitytype="1"><div class="hint">')
+                    .append('<img','close',' class="closeImg" src="http://source.qunar.com/site/images/new_main/Button_Hotcity_Close.gif"/>')
+                    .text(  '<span class="">Top ',cityList.length,'热门城市</span>',
+                            '<hr/><ul>');
+                    for(var i=0;i<cityList.length;i++) {
+                        uio.text('<li>');
+                        uio.append('<a ' ,i).text(' href="javascript:void(0);">',cityList[i],'</a></li>');
+                    }
+
+                    uio.text('<div class="clear"></div>',
+                            '</ul>',
+                            '</div></div>');
+                    uio.write(this.panel);
+                    var own = this.own;
+                    for(var i=0;i<cityList.length;i++) {
+                        var node = uio.getDomNode(i);
+                        $jsex.event.bind(node, 'click', function(evt) {
+                            $jsex.stopEvent(evt);
+                            own.setValue($jsex.trim(this.innerHTML));
+                            own.vidx = null;
+                            own.setInfo('');
+                            own.popups.close();
+                        });
+                    }
+                    $jsex.event.bind(uio.getDomNode('close'), 'click', function() {
+                        own.popups.close();
+                    });
+                }
+            },
+            suggest : {
+                initialize: function(){
+                    this.layer = new SuggestLayer(this,{
+                        select: function(idx,finish){
+                            if(idx > -1)
+                                finish? this.popup.own.setValue(this.nodes[idx].item.key) : this.popup.own.volateValue(this.nodes[idx].item.key);
+                            else
+                                finish? this.popup.own.initValue(this.popup.own.inputold) : this.popup.own.volateValue(this.popup.own.inputold);
+                            this.popup.own.vidx = idx;
+                            if(finish)
+                                this.popup.close();
+                            if(finish && idx>-1){
+                                //trackCityBox( cityBox.getValue() , "1");
+                            }
+                        }
+                    });
+                }
+            }
+        },
+        attrs: {
+            suggRequest : new ScriptRequest({
+                oncomplete: function(data) {
+                    
+                    cityBox.dataLoaded(data);
+                },
+                callbackName:"callback"
+            }),
+
+            invalid : function() {
+                return $jsex.hasClassName(this.infoPanel, 'errtext');
+            },
+            cache: {},
+            suggLoaded : function(data){
+                if(data)
+                    this.cache[data.userInput] = data;
+
+                if(!data || !data.result || !data.result.length  ){
+                    var suggest = this.popups.open('suggest');
+                    if( suggest.layer.error ){
+                        suggest.layer.error();
+                    }else{
+                        this.setInfo('暂未收录','errtext');
+                        this.popups.close();
+                    }
+                    //trackCityBox( data.userInput , "0");
+                    return;
+                }
+                this.setInfo('');
+                data.q = data.userInput;
+                var suggest = this.popups.open('suggest');
+                suggest.layer.refresh(data);
+                suggest.layer.enter(0);
+            },
+            keypress : function(evt,keyCode) {
+
+                var sug = this.popups.get('suggest');
+                if(!sug || !sug.isOpend())
+                    return ;
+
+                switch (keyCode) {
+                    case 40://arrow down
+                        sug.layer.moveCursor(1,true);
+                        break;
+                    case 38://arrow up
+                        sug.layer.moveCursor(-1,true);
+                        break;
+                    case 13://enter
+                        $jsex.stopEvent(evt);
+                        sug.layer.select(sug.layer.cursor,true);
+                        sug.close();
+                        qBox.focusin();
+                        break;
+                    default:
+                }
+            }
+        }
+    });
+
+        </script>
+
+    <script>
+	    var person1 = {name : "ZhangSan", age: 30};
+	    var person2 = {name : "LiSi", age:40 };
+	    function compare(p1, p2){
+			var personArr = [];
+		    personArr.push(p1);
+		    personArr.push(p2)
+		    personArr.sort(function(p1,p2){
+                return p1.age-p2.age
+		    });
+		    for(var i=0,len=personArr.length; i<len; i++){
+			    console.info(personArr[i]);
+		    }
+	    }
+	    compare(person1,person2);
+
+	    var operators = {
+		    add: function(a,b){
+			    return a + b;
+		    },
+		    reduce: function(a,b){
+			    return a-b;
+		    },
+		    multiply: function(a,b){
+				return a*b
+		    },
+		    rid: function(a,b){
+			    return a/b;
+		    },
+		    q: function(a){
+			    return Math.sqrt(a);
+		    }
+	    };
+
+	    //加 parseInt转换成10进制  结果41
+	    console.info(operators.add( parseInt( 11,10 ), parseInt( 30, 10)));
+		//减 结果20
+	    console.info(operators.reduce(parseInt(50),parseInt(30)));
+	    //乘 结果30
+	    console.info(operators.multiply(5,6));
+	    //除 结果5
+	    console.info(operators.rid(10,2));
+	    //开平方 结果2
+	    console.info(operators.q(4));
+
+    </script>
+
+
+    </body>
+</html>

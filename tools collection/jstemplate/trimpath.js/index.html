@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>
+			Trimpath template
+		</title>
+	</head>
+	<body>
+	<div style="width:500px;height:500px;border:solid 1px #f00;">
+		<input type="button" id="btn0" value="jquery one event">
+	</div>
+	<script type="text/javascript" src="/jquery/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="lib/template.js"></script>
+	<script>
+		$("#btn0").on("click",function(event){
+			alert("one bind click");
+			//event.preventDefault();
+			event.stopPropagation();
+			$(document).one("click",function(){
+				//只执行一次
+				alert('document.click');
+			});
+		});		
+	</script>
+	</body>
+</html>
