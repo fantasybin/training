@@ -7,4 +7,4 @@ Store.prototype = {
     get: function(key, val) {
 
     }
-}
+};

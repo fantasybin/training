@@ -8,8 +8,7 @@ router.use(function timeLog(req, res, next) {
 });
 // 定义网站主页的路由
 router.get('/', function(req, res) {
-  //res.send('Bin\'s home page');
-  res.render('index');
+  res.send('Birds home page');
 });
 // 定义 about 页面的路由
 router.get('/about', function(req, res) {

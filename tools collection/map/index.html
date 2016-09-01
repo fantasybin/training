@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta http-equiv="Expires" content="0">
+        <title>baidu-map</title>
+        <link type="text/css" rel="stylesheet" href="../bootstrap/css/bootstrap.css"/>
+        <link type="text/css" rel="stylesheet" href="../bootstrap/css/docs.min.css"/>
+        <link type="text/css" rel="stylesheet" href="css/global.css"/>
+        <link type="text/css" rel="stylesheet" href="css/kz_public.css"/>
+    </head>
+    <body>
+        <div class="container" style="margin:20px auto;border:solid 1px #ccc;">
+            <div class="row">
+                <div class="col-md-5" style="margin:20px;">
+                    <div class="input-group">
+                      <span class="input-group-addon" id="basic-addon1">keys:</span>
+                      <input type="text" class="form-control" placeholder="Search Key" id="inputkey">
+                    </div>
+                    <div id="mapsugg" style=" position:absolute;z-index:999;width:95%;height:auto;background-color:#fff;border:1px solid #C0C0C0;"></div>
+                </div>
+                
+            </div>
+            <div class="row" style="margin:0px;padding:0px;">
+                <div class="col-md-12" style="position:relative;height:600px;">
+                    <div id="mapContainer" style="position: absolute; width: 95%; height: 100%; border: 1px solid gray;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    <script type="text/javascript" src="../jquery/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    </body>
+</html>
