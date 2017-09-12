@@ -18,6 +18,9 @@ $RECYCLE.BIN/
 *.lnk
 
 nodeJs/node_modules
+react/react-router-tutorial/node_modules
+*/node_modules
+*/*/node_modules
 
 # =========================
 # Operating System Files
@@ -47,3 +50,4 @@ nodeJs/node_modules
 Network Trash Folder
 Temporary Items
 .apdisk
+/webpack/webpack-howto

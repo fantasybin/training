@@ -4,6 +4,8 @@
 
 我的建议：这个教程作为你第一个`webpack`的文档，学习完以后去看它的官方文档，了解更详细的说明。
 
+参考过：webpack-howto
+
 ## 学习的前提
 
   * 你了解过类似`browserify`、`RequireJS`的东西
