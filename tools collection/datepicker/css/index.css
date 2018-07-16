@@ -1,0 +1,191 @@
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,div,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}body,button,input,select,textarea{font:12px/1.5 tahoma,arial,sans-serif;color:#555;}h1,h2,h3,h4,h5,h6{font-size:100%;}address,cite,dfn,em,var{font-style:normal;}code,kbd,pre,samp{font-family:"courier new",courier,monospace;}small{font-size:12px;}ul,ol{list-style:none;}a{text-decoration:none;color:#0069ca;}a:hover{text-decoration:none;color:#f60;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}legend{color:#000;}fieldset,img{border:0;}button,input,select,textarea{font-size:100%;}table{border-collapse:collapse;border-spacing:0;}hr{display:block;height:1px;border:none;padding:0;margin:0;clear:both;overflow:hidden;color:#fff;background-color:#FFF;}header{display:block;}footer{display:block;}iframe,img{vertical-align:middle;}caption,th{text-align:left;}.red{color:#fd1664;}.red a{color:#fd1664;}.px14{font-size:14px;}.bold{font-weight:bold;}.pr{font-family:arial;}.clr:after{content:".";display:block;height:0;clear:both;visibility:hidden;}.clr{display:inline-block;}* html .clr{height:1%;}/* Hides from IE-mac \*/ .clr{display:block;}/*.clr,.clear{clear:both;height:0;overflow:hidden;}.clr_after{*zoom:1;}.clr_after:after{clear:both;display:block;height:0;visibility:hidden;content:"\20";}*/
+
+.selectct{
+    height:30px;
+    line-height: 30px;
+    padding: 5px;
+}
+
+.qunar-dp  { width:173px; font:normal 12px/1.5 tahoma,Geneva,sans-serif; background-color:#fff; color:#555; }
+.qunar-dp .textbox { padding:2px 4px 1px; border:0; width:165px; height:16px; height:14px\9; font:normal 12px/14px simsun,arial,sans-serif; _line-height:16px; background-color:#fff; }
+.qunar-dp .dp-info { position:absolute; top:2px; right:2px; z-index:1; padding:0 0 0 4px; height:15px; font-size:12px; line-height:15px; text-align:right; cursor:pointer; }
+.qunar-dp .dp-info b { float:right; display:inline; width:20px; height:15px; background:url(http://source.qunar.com/site/images/2011/QN1CS1.gif) -23px 1px no-repeat; }
+.qunar-dp .dp-info .dp-text { float:right; display:inline; background-color:#fff; }
+.qunar-dp .q-datepicker { position:absolute;top:17px; left:-1px; border:1px solid #ddd; background-color:#fff; *zoom:1; }
+.qunar-dp .q-datepicker .g { position:absolute; top:1px; left:-1px; z-index:2; border:1px solid #bababa; width:348px; background-color:#fff; overflow:hidden; }
+.qunar-dp .q-datepicker .g:after { clear:both; display:block; height:0; visibility:hidden; content:"\20"; }
+.qunar-dp .q-datepicker .c { position:relative; z-index:1; float:left; display:inline; margin-left:-1px; border-left:1px solid #ccc; width:50%; height:158px}
+.qunar-dp .q-datepicker .h { padding:3px 0; height:18px; text-align:center; color:#0069ca; }
+.qunar-dp .q-datepicker .p { position:absolute; top:5px; left:5px; width:16px; height:16px; background:url(http://source.qunar.com/site/images/2011/QN1CS1.gif) -48px 1px no-repeat; cursor:pointer; }
+.qunar-dp .q-datepicker .n { position:absolute; top:5px; right:5px; width:16px; height:16px; background:url(http://source.qunar.com/site/images/2011/QN1CS1.gif) -65px 1px no-repeat; cursor:pointer; }
+.qunar-dp .q-datepicker table { border:1px solid #fff; border-collapse:collapse; width:100%; }
+.qunar-dp .q-datepicker th { border-bottom:1px solid #ccc; width:14.286%; height:22px; text-align:center; }
+.qunar-dp .q-datepicker td { height:18px; text-align:center; cursor:pointer; }
+.qunar-dp .q-datepicker td span{display:block;width:100%;}
+
+.qunar-dp .q-datepicker .w0 { color:#c60b02; }
+.qunar-dp .q-datepicker .w6 { color:#c60b02; }
+
+.qunar-dp .q-datepicker .st-t { color:#00F;  }
+.qunar-dp .q-datepicker .st-a { background-color:#fdab00; color:#fff; }
+
+.qunar-dp .q-datepicker .st-s { background-color:transparent; cursor:default;}
+.qunar-dp .q-datepicker .st-s:hover, .qunar-dp .q-datepicker .st-s-hover { background-color:#fff; cursor:default; }
+
+.qunar-dp .q-datepicker .holi { color: #C60B02; }
+
+.qunar-dp .q-datepicker .st-h { background-color:#fdab00; color:#fff;}
+.qunar-dp .q-datepicker .st-d { color:#999; cursor:not-allowed; }
+.qunar-dp .q-datepicker .st-d:hover, .qunar-dp .q-datepicker .st-d-hover { background-color:transparent; color:#999; cursor:not-allowed; }
+.qunar-dp .q-datepicker .st-a-r { background-color:#6899ff; color:#fff; }
+
+.qunar-dp .qunar-dp-toD td:hover, .qunar-dp .qunar-dp-toD td-hover { background-color:#6899ff; color:#fff; cursor:pointer; }
+.qunar-dp .qunar-dp-toD td.st-a-r { background-color:#6899ff; color:#fff; }
+
+.qunar-dp .errtext { color:red; }
+
+.cm_1, .cm_2, .cm_3, .cm_4, .cm_5, .cm_6,
+.cm_7, .cm_8, .cm_9, .cm_10, .cm_11, .cm_12 { background:url(http://source.qunar.com/site/images/2011/QN1CS3.png) 0 0 no-repeat; }
+.cm_1 { background-position:36px 60px; }
+.cm_2 { background-position:-134px 60px; }
+.cm_3 { background-position:-306px 60px; }
+.cm_4 { background-position:36px -100px; }
+.cm_5 { background-position:-134px -100px; }
+.cm_6 { background-position:-306px -100px; }
+.cm_7 { background-position:36px -257px; }
+.cm_8 { background-position:-134px -257px; }
+.cm_9 { background-position:-306px -257px; }
+.cm_10 { background-position:36px -412px; }
+.cm_11 { background-position:-134px -412px; }
+.cm_12 { background-position:-306px -412px; }
+
+
+
+.q-suggest { font:12px/1.5 tahoma, arial, 宋体, sans-serif; position:absolute; top:1px; left:1px; margin-left:-1px; border:1px solid #666; }
+.q-suggest tr { color:#404040; font-size:12px; line-height:18px; padding:1px 0 2px; }
+.q-suggest tr.active { background-color:#39f; color:#fff; }
+.q-suggest td { font-size:12px; padding-left:5px; }
+.q-suggest table { background:none repeat scroll 0 0 #fff; cursor:default; width:100%; }
+
+
+.qcbox {
+    background-color: #fff;
+    border: 1px solid #BABABA;
+    display: inline;
+    float: left;
+    padding: 0;
+    position: relative;
+}
+.qcbox .boxWrapper {
+    position: relative;
+}
+.qcbox .boxContainer {
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 2px;
+}
+.qcbox .boxContainer .sinfo {
+    display: inline;
+    float: left;
+    font-family: simsun;
+    font-size: 12px;
+    padding-top: 1px;
+}
+.qcbox .boxContainer .infotext {
+    color: #ccc;
+}
+.qcbox .boxContainer .errtext {
+    background-color: #fff;
+    color: red !important;
+    padding-left: 6px;
+}
+.qcbox .boxContainer .sicon {
+    background: url("http://source.qunar.com/site/images/2011/QN1CS1.gif") no-repeat scroll 2px 1px #FFFFFF;
+    display: inline;
+    float: left;
+    font-family: simsun;
+    font-size: 12px;
+    height: 15px;
+    line-height: 20px;
+    width: 21px;
+}
+.qcbox input {
+    border: 0 none;
+    display: inline;
+    float: left;
+    font: 12px/16px tahoma,sans-serif;
+    height: 16px;
+    padding: 2px 21px 1px 2px;
+    width: 150px;
+}
+.qcbox .popContainer {
+    clear: both;
+    position: relative;
+    z-index: 2000;
+}
+.qcbox .popContainer .popPanel {
+    background-color: #fff;
+    border: 1px solid #666666;
+    font-size: 12px;
+    left: -1px;
+    position: absolute;
+    top: 1px;
+}
+
+.cityinput {
+    width: 350px;
+}
+.cityinput .hint {
+    font-size: 12px;
+    padding: 5px;
+}
+.cityinput .closeImg {
+    cursor: pointer;
+    display: inline;
+    float: right;
+    height: 14px;
+    width: 14px;
+}
+.cityinput hr {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color -moz-use-text-color #BBBBBB;
+    border-style: none none dashed;
+    border-width: 0 0 1px;
+    clear: both;
+    color: #FFFFFF;
+}
+.cityinput ul {
+    height: 1%;
+}
+.cityinput ul:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.cityinput ul li {
+    float: left;
+    padding: 5px 0;
+    text-align: center;
+    width: 20% !important;
+}
+.cityinput ul li a {
+    color: #555555 !important;
+    padding: 2px 8px;
+}
+.cityinput ul li a:hover {
+    color: #555555;
+    text-decoration: none;
+}
+.cityinput .inter ul li {
+    width: 25% !important;
+}
+
+table td {height:30px;}

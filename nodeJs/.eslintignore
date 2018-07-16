@@ -1,0 +1,10 @@
+# common libs
+client/scripts/*
+client/src/scripts/libs/*
+client/src/scripts/utils/*
+client/src/dll/*
+node_modules
+
+# other
+*.html
+client/static/*

@@ -1,0 +1,50 @@
+{
+  "extends": "ufe",
+  "parser": "babel-eslint",
+  "rules": {
+
+    // prop必须有default
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-default-props.md
+    "react/require-default-props": 0,
+
+    // 如果fun根据条件显示的返回一个类型的值,就不能返回另外一个类型的值
+    // https://eslint.org/docs/rules/consistent-return
+    "consistent-return": 0,
+    
+    // 鼠标和键盘相关操作使用交互式html标签, 
+    // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-noninteractive-element-interactions.md
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "prefer-template": 0,
+    "arrow-parens": 0,
+    "no-console": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "max-len": [1,140],
+    "arrow-body-style": 0,
+    //多个空格
+    "no-multi-spaces": "warn",
+    //未使用的变量 警告即可
+    "no-unused-vars":"warn",
+    //react function 上下位置顺序必须跟规则一致
+    "react/sort-comp":"off",
+    //img 标签必填alt属性
+    "jsx-a11y/alt-text": "off",
+    //允许代码debugger
+    "no-debugger": "off",
+    //允许使用 ++ --
+    "no-plusplus": "off",
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "never" //参数结尾加逗号导致node6.x执行报错，关闭之
+      }
+    ],
+    "eol-last":"off"
+  },
+  "globals": {
+    "API_DOMAI": false
+  }
+}

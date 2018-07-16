@@ -1,0 +1,19 @@
+{
+  "homepage": "https://github.com/nimojs/gulp-book",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "start": "gulp",
+    "clean": "gulp clean-target"
+  },
+  "main": "gulpfile.js",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-uglify": "^1.1.0"
+  },
+  "dependencies": {
+    "gulp-clean": "^0.4.0",
+    "gulp-rev": "^8.1.1"
+  }
+}

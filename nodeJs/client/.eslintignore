@@ -1,0 +1,9 @@
+# common libs
+src/scripts/libs/*
+src/scripts/utils/*
+src/dll/*
+node_modules
+
+# other
+*.html
+static/*

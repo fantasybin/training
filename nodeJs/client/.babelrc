@@ -1,0 +1,25 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false
+      }
+    ],
+    "stage-0",
+    "react"
+  ],
+  "plugins": [
+    [
+      "transform-runtime"
+    ],
+    "transform-decorators-legacy",
+    [
+      "import",
+      {
+        "style": true,
+        "libraryName": "antd-mobile"
+      }
+    ]
+  ]
+}

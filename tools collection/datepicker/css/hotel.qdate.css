@@ -1,0 +1,19 @@
+
+.qdate .sicon { background-position:-25px 3px; }
+.qdate .dpanel { width:340px; *zoom:1; }
+.qdate .dpanel:after { clear:both; display:block; height:0; visibility:hidden; content:"\20"; }
+.qdate .dpart { position:relative; z-index:1; float:left; display:inline; margin-left:-1px; border-left:1px solid #ccc; width:170px; color:#000; overflow:hidden; }
+.qdate .dpart h3 { height:24px; font:normal 12px/24px tahoma,arial,sans-serif; text-align:center; color:#0069ca; }
+.qdate .dpart table { margin:1px; padding:0; border:0 none; border-collapse:collapse; width:168px; }
+.qdate .dpart td { margin:0; padding:0 !important; width:24px; height:18px; font:normal 12px/18px tahoma,arial,sans-serif; text-align:center; vertical-align:middle; }
+.qdate .dpart .thead td { border-bottom:1px solid #ccc; height:21px; line-height:21px; }
+.qdate .upTd { position:absolute; top:0; left:0; width:24px; height:24px; background:url(http://source.qunar.com/site/images/2011/QN1CS1.gif) -44px 5px no-repeat; cursor:pointer; }
+.qdate .downTd { position:absolute; top:0; right:0; width:24px; height:24px; background:url(http://source.qunar.com/site/images/2011/QN1CS1.gif) -62px 5px no-repeat; cursor:pointer; }
+.qdate .cnone { color:#999; cursor:default; }
+.qdate .holi { color:#c60b02; }
+.qdate .onmouseover { background-color:#fdab00; color:#fff; cursor:pointer; }
+.toD .onmouseover { background-color:#6899ff; color:#fff; cursor:pointer; }
+.qdate .out { background-color:transparent; color:#999; cursor:not-allowed; }
+.qdate .today { color:#00f; }
+.qdate .curr { background-color:#fdab00; color:#fff; }
+.qdate .othr { background-color:#6899ff; color:#fff; }

@@ -1,0 +1,16 @@
+.idea/*
+.vscode/*
+node_modules
+static/
+.DS_Store
+**/.DS_Store
+logs/
+*.log
+src/dll/
+__build/
+.cache/
+
+
+
+
+

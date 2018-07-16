@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>training</title>
+        <script type="text/javascript" src="../jquery/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="scripts/jquery.qdatepicker.js"></script>
+        <link type="text/css" rel="stylesheet" href="../bootstrap/css/bootstrap.css"/>
+        <link type="text/css" rel="stylesheet" href="../bootstrap/css/docs.min.css"/>
+        <link type="text/css" rel="stylesheet" href="css/index.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <h1>this is DatePicker Demo</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="bs-docs-section">
+                        <div class="bs-example" data-example-id="basic-forms">
+                            <form id="form1" class="form-inline">
+                              <div class="form-group">
+                                <label for="exampleInputName2">Name</label>
+                                <div class="selectct">
+                                        <div class="qcbox qdate fromD"><input autocomplete="off" type="text" class="cinput" name="fromDate" id="fromDate" value=""></div>
+                                </div>
+                                <div class="selectct">
+                                    <div class="qcbox qdate toD"><input autocomplete="off" type="text" class="cinput" name="returnDate" id="returnDate" value=""></div>
+                                </div>
+                                <div class="selectct">
+                                    <button type="button" id="btnsubmit" class="btn">提交</button>
+                                </div>
+                              </div>
+                            </form>
+                            
+                          </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                </div>
+            </div>
+        </div>
+        <script>
+            $("#returnDate").qdatepicker( { ui : 'qunar' , refObj : $("#fromDate") } );
+            $("#fromDate").qdatepicker( { ui : 'qunar' , minDate : new Date(2012, 4, 23), linkTo : $("#returnDate"),  linkRules : '+3D,+1D,+3M'} );
+        </script>
+    </body>
+</html>
