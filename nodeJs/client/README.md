@@ -1,6 +1,6 @@
 ### YCCMTMWAP
 
-  神州车管家-商户维保管理端-WAP
+  商户维保管理端-WAP
   > 项目技术栈： zepto(v1.2.0) + react(v16.2.0) + handlebars|ejs 。
 --- 
 
